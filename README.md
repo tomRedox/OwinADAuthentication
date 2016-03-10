@@ -1,2 +1,2 @@
 # OwinADAuthentication
-Sample code creating OWIN authentication cookie against Active Directory
+This is a sample solution for my [blog post](http://tech.trailmax.info/2016/03/using-owin-and-active-directory-to-authenticate-users-in-asp-net-mvc-5-application/). Here we are using OWIN authentication cookie together with Active Directory to authenticate Asp.Net MVC 5 solution.
