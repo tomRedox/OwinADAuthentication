@@ -1,30 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace ActiveDirectoryAuthentication.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize]
-        public ActionResult About()
+        [Authorize(Roles = "NonExistingRole")]
+        public ActionResult ForNonExistingRole()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        [Authorize(Roles = "Users")]
+        public ActionResult OnlyForUsers()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
 
+        [Authorize]
+        public ActionResult MyClaims()
+        {
             return View();
         }
     }
