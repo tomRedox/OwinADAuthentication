@@ -68,14 +68,14 @@ namespace ActiveDirectoryAuthentication.Models
 
             if (userPrincipal.IsAccountLockedOut())
             {
-                // here can be a security related discussion weather it is worth 
+                // here can be a security related discussion whether it is worth 
                 // revealing this information
                 return new AuthenticationResult("Your account is locked.");
             }
 
             if (userPrincipal.Enabled.HasValue && userPrincipal.Enabled.Value == false)
             {
-                // here can be a security related discussion weather it is worth 
+                // here can be a security related discussion whether it is worth 
                 // revealing this information
                 return new AuthenticationResult("Your account is disabled");
             }
